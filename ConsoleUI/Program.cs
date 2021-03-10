@@ -5,14 +5,14 @@ using System;
 
 namespace ConsoleUI
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
             CarManager carManager = new CarManager(new EfCarDal());
-            foreach (var cars in carManager.GetAll())
+            foreach (var cars in carManager.GetCarDetails())
             {
-                Console.WriteLine(cars.CarName + cars.Description);
+                Console.WriteLine(cars.CarName + " " + cars.BrandName + " " + cars.ColorName + " " + cars.DailyPrice);
             }
         }
     }
